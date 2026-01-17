@@ -7,8 +7,14 @@ FluentPage {
     id: fluentPage
 
     property url docsUrl: "https://ui.rinlit.cn/"
+    property url repoUrl: "https://github.com/RinLit-233-shiroko/Rin-UI"
     property string badgeText: ""
+    property string pageName: title
     property var badgeSeverity: Severity.Info
+
+    function getSourceCodeUrl(pageName) {
+        return `${repoUrl}/tree/master/examples/pages/controls/${pageName}.qml`
+    }
 
     contentSpacing: 32
 
@@ -56,9 +62,11 @@ FluentPage {
                         visible: parent.hovered
                     }
                 }
-                Button {
+                DropDownButton {
                     icon.name: "ic_fluent_code_20_regular"
                     text: qsTr("Source")
+                    onClicked: Qt.openUrlExternally(getSourceCodeUrl(pageName))
+
                     ToolTip {
                         delay: 500
                         text: qsTr("Source code of this sample page")
