@@ -147,10 +147,12 @@ QtObject {
         },
         {
             icon: Qt.resolvedUrl("controls/IconElement.png"),
-            title: qsTr("IconWidget"),
-            type: "styles",
-            desc: qsTr("Represents icon controls that use different image types as its content."),
-            page: Qt.resolvedUrl("../pages/controls/Icon.qml"),
+            title: qsTr("Iconography"),
+            type: "design",
+            desc: qsTr("Icons are a visual design language that " +
+                "can be used to communicate information " +
+                "quickly and effectively."),
+            page: Qt.resolvedUrl("../pages/Iconography.qml"),
         },
         {
             icon: Qt.resolvedUrl("controls/InfoBadge.png"),
