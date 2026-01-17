@@ -23,6 +23,7 @@ Hyperlink 1.0 BasicInput/Hyperlink.qml
 ToolButton 1.0 BasicInput/ToolButton.qml
 Switch 1.0 BasicInput/Switch.qml
 RadioButton 1.0 BasicInput/RadioButton.qml
+ColorPicker 1.0 BasicInput/ColorPicker.qml
 
 # Media
 Avatar 1.0 Media/Avatar.qml

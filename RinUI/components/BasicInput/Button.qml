@@ -13,15 +13,19 @@ Button {
     property color backgroundColor: flat ? Theme.currentTheme.colors.subtleSecondaryColor :
         highlighted ? primaryColor : Theme.currentTheme.colors.controlColor
     // default property alias icon.source: icon.source
-    property alias size: text.font.pixelSize
+    // property alias size: text.font.pixelSize
+    property alias radius: background.radius
+
     property bool hoverable: true  // 是否可悬停
     property bool accessibliityIndicator: true  // 是否显示辅助提示
     property string suffixIconName: ""  // 后缀图标
 
     readonly property color hoverColor: !highlighted && !flat
         ? Theme.currentTheme.colors.controlSecondaryColor : backgroundColor
-    icon.width: text.font.pixelSize * 1.3
-    icon.height: text.font.pixelSize * 1.3
+    icon.width: font.pixelSize * 1.3
+    icon.height: font.pixelSize * 1.3
+
+    font: text.font
 
     // accessibility
     FocusIndicator {

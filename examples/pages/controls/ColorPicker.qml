@@ -27,11 +27,12 @@ ControlPage {
 
             ColorPicker {
                 id: picker
-                isMoreVisible: moreBtnCheckBox.checked
-                isColorSliderVisible: colorSliderCheckBox.checked
-                isColorChannelInputVisible: colorChannelCheckBox.checked
-                isHexInputVisible: hexCheckBox.checked
-                isAlphaInputVisible: alphaInputCheckBox.checked
+                moreVisible: moreBtnCheckBox.checked
+                colorSliderVisible: colorSliderCheckBox.checked
+                colorChannelInputVisible: colorChannelCheckBox.checked
+                hexInputVisible: hexCheckBox.checked
+                alphaSliderVisible: alphaSliderCheckBox.checked
+                alphaInputVisible: alphaInputCheckBox.checked
                 alphaEnabled: alphaCheckBox.checked
                 ringMode: rinCheckBox.checked
 
@@ -41,21 +42,21 @@ ControlPage {
             showcase: [
                 CheckBox {
                     id: moreBtnCheckBox
-                    text: qsTr("isMoreButtonVisible")
+                    text: qsTr("moreButtonVisible")
                 },
                 CheckBox {
                     id: colorSliderCheckBox
-                    text: qsTr("isColorSliderVisible")
+                    text: qsTr("colorSliderVisible")
                     checked: true
                 },
                 CheckBox {
                     id: colorChannelCheckBox
-                    text: qsTr("isColorChannelInputVisible")
+                    text: qsTr("colorChannelInputVisible")
                     checked: true
                 },
                 CheckBox {
                     id: hexCheckBox
-                    text: qsTr("isHexInputVisible")
+                    text: qsTr("HexInputVisible")
                     checked: true
                 },
                 CheckBox {
@@ -64,12 +65,12 @@ ControlPage {
                 },
                 CheckBox {
                     id: alphaSliderCheckBox
-                    text: qsTr("isAlphaSliderVisible")
+                    text: qsTr("alphaSliderVisible")
                     checked: true
                 },
                 CheckBox {
                     id: alphaInputCheckBox
-                    text: qsTr("isAlphaInputVisible")
+                    text: qsTr("AlphaInputVisible")
                     checked: true
                 },
                 Text {
@@ -92,6 +93,49 @@ ControlPage {
                     width: 250
                     height: 100
                     color: picker.color
+                }
+            ]
+        }
+    }
+
+    Column {
+        Layout.fillWidth: true
+        spacing: 4
+
+        Text {
+            typography: Typography.BodyStrong
+            text: qsTr("DropDownColorPicker")
+        }
+        ControlShowcase {
+            width: parent.width
+            showcaseWidth: 300
+
+            DropDownColorPicker {
+                // picker
+                moreVisible: moreBtnCheckBox.checked
+                colorSliderVisible: colorSliderCheckBox.checked
+                colorChannelInputVisible: colorChannelCheckBox.checked
+                hexInputVisible: hexCheckBox.checked
+                alphaSliderVisible: alphaSliderCheckBox.checked
+                alphaInputVisible: alphaInputCheckBox.checked
+                alphaEnabled: alphaCheckBox.checked
+                ringMode: rinCheckBox.checked
+
+                // self
+                textVisible: textCheckBox.checked
+                hexText: hexTextCheckBox.checked
+
+                color: "white"
+            }
+
+            showcase: [
+                CheckBox {
+                    id: textCheckBox
+                    text: qsTr("textVisible")
+                },
+                CheckBox {
+                    id: hexTextCheckBox
+                    text: qsTr("hexText")
                 }
             ]
         }
