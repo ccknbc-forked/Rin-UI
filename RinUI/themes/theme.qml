@@ -57,22 +57,41 @@ Item {
     function setThemeColor(color) {
         if (!_isThemeMgrInitialized()) {
             console.error("ThemeManager is not defined.")
-            return -1
+            return
         }
-        if (typeof color !== "string") {
-            console.error("Invalid color format. Expected a string.")
-            return -1
+
+        var hex = null
+
+        if (typeof color === "string") {
+            hex = color
         }
-        Utils.primaryColor = color
-        ThemeManager.set_theme_color(color)
+
+        else if (typeof color === "object" && color.r !== undefined) {
+            hex = color.toString()
+        }
+        else {
+            console.error("Invalid color format:", color)
+            return
+        }
+
+        Utils.primaryColor = hex
+        ThemeManager.set_theme_color(hex)
     }
 
     function getThemeColor() {
-        if (!_isThemeMgrInitialized()) {
-            console.error("ThemeManager is not defined.")
-            return -1
-        }
-        return ThemeManager.get_theme_color()
+        if (!_isThemeMgrInitialized())
+            return "transparent"
+
+        let hex = ThemeManager.get_theme_color()
+
+        if (typeof hex !== "string" || hex.length < 6)
+            return "transparent"
+
+        let color = Qt.color(hex)
+        if (color === undefined)
+            return "transparent"
+
+        return color
     }
 
     function getTheme() {

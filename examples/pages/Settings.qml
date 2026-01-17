@@ -54,6 +54,22 @@ FluentPage {
                 }
             }
         }
+
+        SettingCard {
+            width: parent.width
+            title: qsTr("Accent Color")
+            description: qsTr("Pick the color which app highlighted color")
+            icon.name: "ic_fluent_paint_brush_20_regular"
+
+            DropDownColorPicker {
+                position: Position.Left
+
+                color: Theme.getThemeColor()
+                onColorChanged: {
+                    Theme.setThemeColor(color)
+                }
+            }
+        }
     }
 
     Column {
@@ -104,7 +120,7 @@ FluentPage {
         SettingExpander {
             width: parent.width
             title: qsTr("RinUI Gallery")
-            description: qsTr("© 2025 RinLit. All rights reserved.")
+            description: qsTr("© 2026 RinLit. All rights reserved.")
             icon.source: Qt.resolvedUrl("../assets/BA_Pic_Shiroko-chibi.png")
             icon.size: 28
 

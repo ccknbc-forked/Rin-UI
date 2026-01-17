@@ -10,6 +10,24 @@
     </message>
 </context>
 <context>
+    <name>AutoSuggestBox</name>
+    <message>
+        <location filename="../pages/controls/AutoSuggestBox.qml" line="9"/>
+        <source>AutoSuggestBox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/AutoSuggestBox.qml" line="14"/>
+        <source>A text control that makes suggestions to users as they type. The app is notified when text has been changed by the user and is responsible for providing relevant suggestions for this control to display.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/AutoSuggestBox.qml" line="27"/>
+        <source>A basic autosuggest TextField.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Avatar</name>
     <message>
         <location filename="../pages/controls/Avatar.qml" line="8"/>
@@ -127,8 +145,8 @@
     </message>
     <message>
         <location filename="../pages/controls/Button.qml" line="104"/>
-        <source>This is some text
-that is too long
+        <source>This is some text 
+that is too long 
 but with wrapping.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -150,6 +168,114 @@ but with wrapping.</source>
     <message>
         <location filename="../pages/controls/Button.qml" line="154"/>
         <source>Flat Style Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CalendarDatePicker</name>
+    <message>
+        <location filename="../pages/controls/CalendarDatePicker.qml" line="10"/>
+        <source>CalendarDatePicker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarDatePicker.qml" line="11"/>
+        <source>Extra</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarDatePicker.qml" line="21"/>
+        <source>CalendarDatePicker with placeholder text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarDatePicker.qml" line="29"/>
+        <source>Calendar</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CalendarView</name>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="10"/>
+        <source>Calendar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="24"/>
+        <source>Calendar shows a month grid with Mon-first toggle. Supports selecting a single date, and clicking twice to select a range, and marking dates as highlighted or disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="38"/>
+        <source>A basic Calendar.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="48"/>
+        <location filename="../pages/controls/CalendarView.qml" line="145"/>
+        <source>Selected: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="76"/>
+        <source>Use ISO Week</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="81"/>
+        <source>Range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="82"/>
+        <source>Single</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="92"/>
+        <location filename="../pages/controls/CalendarView.qml" line="153"/>
+        <source>Today</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="96"/>
+        <source>Highlight Today</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="100"/>
+        <source>Disable 1st and 15th</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="109"/>
+        <source>Selected: none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="113"/>
+        <source>Minimum Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="117"/>
+        <source>Maximum Date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="132"/>
+        <source>CalendarDatePicker (Button popup)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="140"/>
+        <source>CalendarDatePicker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/CalendarView.qml" line="148"/>
+        <source>Show week numbers</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -224,6 +350,94 @@ but with wrapping.</source>
         <location filename="../pages/Collections.qml" line="9"/>
         <source>Collections</source>
         <translation>集合</translation>
+    </message>
+</context>
+<context>
+    <name>ColorPicker</name>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="8"/>
+        <source>ColorPicker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="13"/>
+        <source>A selectable color spectrum</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="22"/>
+        <source>ColorPicker Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="45"/>
+        <source>moreButtonVisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="49"/>
+        <source>colorSliderVisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="54"/>
+        <source>colorChannelInputVisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="59"/>
+        <source>HexInputVisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="64"/>
+        <source>alphaEnabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="68"/>
+        <source>alphaSliderVisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="73"/>
+        <source>AlphaInputVisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="77"/>
+        <source>Colorspectrum shape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="81"/>
+        <source>Box</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="86"/>
+        <source>Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="90"/>
+        <source>ColorPicker applied on a Rectangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="107"/>
+        <source>DropDownColorPicker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="134"/>
+        <source>textVisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/ColorPicker.qml" line="138"/>
+        <source>hexText</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -382,7 +596,7 @@ but with wrapping.</source>
     </message>
     <message>
         <location filename="../pages/controls/Dialog.qml" line="18"/>
-        <source>This a dialog with basic content.
+        <source>This a dialog with basic content. 
 Meow</source>
         <translation type="unfinished"></translation>
     </message>
@@ -803,9 +1017,9 @@ Meow</source>
     <name>Iconography</name>
     <message>
         <location filename="../pages/Iconography.qml" line="23"/>
-        <location filename="../pages/Iconography.qml" line="151"/>
-        <location filename="../pages/Iconography.qml" line="181"/>
-        <location filename="../pages/Iconography.qml" line="211"/>
+        <location filename="../pages/Iconography.qml" line="169"/>
+        <location filename="../pages/Iconography.qml" line="199"/>
+        <location filename="../pages/Iconography.qml" line="229"/>
         <source>No icon selected</source>
         <translation>没有图标被选中</translation>
     </message>
@@ -820,24 +1034,44 @@ Meow</source>
         <translation>已复制到剪贴板</translation>
     </message>
     <message>
-        <location filename="../pages/Iconography.qml" line="52"/>
+        <location filename="../pages/Iconography.qml" line="54"/>
+        <source>Fluent Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/Iconography.qml" line="58"/>
+        <source>SVG Icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/Iconography.qml" line="70"/>
         <source>Fluent Icon Library</source>
         <translation>Fluent 图标库</translation>
     </message>
     <message>
-        <location filename="../pages/Iconography.qml" line="58"/>
+        <location filename="../pages/Iconography.qml" line="76"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../pages/Iconography.qml" line="168"/>
+        <location filename="../pages/Iconography.qml" line="186"/>
         <source>Icon name</source>
         <translation>图标名称</translation>
     </message>
     <message>
-        <location filename="../pages/Iconography.qml" line="197"/>
+        <location filename="../pages/Iconography.qml" line="215"/>
         <source>QML code</source>
         <translation>QML 代码</translation>
+    </message>
+    <message>
+        <location filename="../pages/Iconography.qml" line="253"/>
+        <source>Toggle the checkbox and switch the theme to see how the SVG icons adapt to the text color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/Iconography.qml" line="291"/>
+        <source>Color Overlay</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1005,340 +1239,380 @@ Meow</source>
 <context>
     <name>ItemData</name>
     <message>
-        <location filename="../assets/ItemData.qml" line="199"/>
+        <location filename="../assets/ItemData.qml" line="239"/>
         <source>SelectorBar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="201"/>
+        <location filename="../assets/ItemData.qml" line="241"/>
         <source>Presents information from a small set of  different sources. The user can pick one of them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="43"/>
+        <location filename="../assets/ItemData.qml" line="61"/>
         <source>Button</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="33"/>
-        <source>Avatar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../assets/ItemData.qml" line="35"/>
-        <source>Display a picture of a person/contact.</source>
+        <location filename="../assets/ItemData.qml" line="43"/>
+        <source>AutoSuggestBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../assets/ItemData.qml" line="45"/>
+        <source>A control to provide suggestions as a user is typing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="51"/>
+        <source>Avatar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="53"/>
+        <source>Display a picture of a person/contact.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="63"/>
         <source>A Control that responds to user input and raise a Click event.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="50"/>
+        <location filename="../assets/ItemData.qml" line="68"/>
+        <source>CalendarDatePicker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="70"/>
+        <source>A control that let user pick a date value using a calendar.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="76"/>
+        <source>Calendar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="78"/>
+        <source>A control that presents a calendar for a user to set choose a date form.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="84"/>
         <source>CheckBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="52"/>
+        <location filename="../assets/ItemData.qml" line="86"/>
         <source>A Control that user can be select or clear.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="57"/>
+        <location filename="../assets/ItemData.qml" line="91"/>
+        <source>ColorPicker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="93"/>
+        <source>A control that displays a selectable color spectrum.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/ItemData.qml" line="99"/>
         <source>ComboBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="59"/>
+        <location filename="../assets/ItemData.qml" line="101"/>
         <source>A drop-down list of items a user can select from.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="64"/>
+        <location filename="../assets/ItemData.qml" line="106"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="66"/>
+        <location filename="../assets/ItemData.qml" line="108"/>
         <source>A dialog box that can be customized to contain any QML content.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="71"/>
+        <location filename="../assets/ItemData.qml" line="113"/>
         <source>DatePicker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="73"/>
-        <location filename="../assets/ItemData.qml" line="290"/>
+        <location filename="../assets/ItemData.qml" line="115"/>
+        <location filename="../assets/ItemData.qml" line="325"/>
         <source>A configurable control that lets a user pick a time value.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="79"/>
+        <location filename="../assets/ItemData.qml" line="121"/>
         <source>DropDownButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="81"/>
+        <location filename="../assets/ItemData.qml" line="123"/>
         <source>A button that display a flyout of choices when clicked.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="86"/>
+        <location filename="../assets/ItemData.qml" line="128"/>
         <source>Expander</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="88"/>
-        <location filename="../assets/ItemData.qml" line="211"/>
+        <location filename="../assets/ItemData.qml" line="130"/>
+        <location filename="../assets/ItemData.qml" line="250"/>
         <source>A container with a header that can be expanded to show a body with more content.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="94"/>
+        <location filename="../assets/ItemData.qml" line="135"/>
         <source>Flyout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="96"/>
+        <location filename="../assets/ItemData.qml" line="137"/>
         <source>Shows contextual information and enables user interaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="102"/>
+        <location filename="../assets/ItemData.qml" line="143"/>
         <source>Hyperlink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="104"/>
+        <location filename="../assets/ItemData.qml" line="145"/>
         <source>A button that appears as a hyperlink text, and can navigate to a URL or handle a click event.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="109"/>
+        <location filename="../assets/ItemData.qml" line="150"/>
         <source>IconWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="111"/>
+        <location filename="../assets/ItemData.qml" line="152"/>
         <source>Represents icon controls that use different image types as its content.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="116"/>
+        <location filename="../assets/ItemData.qml" line="157"/>
         <source>InfoBadge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="118"/>
+        <location filename="../assets/ItemData.qml" line="159"/>
         <source>An non-intrusive UI to display notificatons or bring focus to an area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="124"/>
+        <location filename="../assets/ItemData.qml" line="165"/>
         <source>InfoBar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="126"/>
+        <location filename="../assets/ItemData.qml" line="167"/>
         <source>An inline message to display app-wide status change information.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="132"/>
+        <location filename="../assets/ItemData.qml" line="173"/>
         <source>ListView</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="134"/>
+        <location filename="../assets/ItemData.qml" line="175"/>
         <source>A control that presents a collection of items in a vertical list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="139"/>
+        <location filename="../assets/ItemData.qml" line="180"/>
         <source>Menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="141"/>
+        <location filename="../assets/ItemData.qml" line="182"/>
         <source>Shows a contextual list of simple commands or options.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="146"/>
+        <location filename="../assets/ItemData.qml" line="187"/>
         <source>MenuBar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="148"/>
+        <location filename="../assets/ItemData.qml" line="189"/>
         <source>A classic menu, allowing the display of MenuBarItem containing Menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="153"/>
+        <location filename="../assets/ItemData.qml" line="194"/>
         <source>NavigationView</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="155"/>
+        <location filename="../assets/ItemData.qml" line="196"/>
         <source>Common vertical layout for top-level areas of your app via a collapsible navigation menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="161"/>
+        <location filename="../assets/ItemData.qml" line="202"/>
         <source>Popup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="163"/>
+        <location filename="../assets/ItemData.qml" line="204"/>
         <source>A UI element displaying temporary content over exiting interface.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="169"/>
+        <location filename="../assets/ItemData.qml" line="210"/>
         <source>ProgressBar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="171"/>
-        <location filename="../assets/ItemData.qml" line="178"/>
+        <location filename="../assets/ItemData.qml" line="212"/>
+        <location filename="../assets/ItemData.qml" line="220"/>
         <source>Shows the apps progress on a task, or that the app is performing ongoing work that doesn&apos;t block user interaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="176"/>
+        <location filename="../assets/ItemData.qml" line="218"/>
         <source>ProgressRing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="184"/>
+        <location filename="../assets/ItemData.qml" line="225"/>
         <source>RadioButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="186"/>
+        <location filename="../assets/ItemData.qml" line="227"/>
         <source>A control that allows a user to select a single option from a group of options.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="191"/>
+        <location filename="../assets/ItemData.qml" line="232"/>
         <source>RoundButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="193"/>
+        <location filename="../assets/ItemData.qml" line="234"/>
         <source>A control likes Button except that it has a radius property.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="209"/>
+        <location filename="../assets/ItemData.qml" line="248"/>
         <source>SettingExpander</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="216"/>
+        <location filename="../assets/ItemData.qml" line="255"/>
         <source>Slider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="218"/>
+        <location filename="../assets/ItemData.qml" line="257"/>
         <source>A control that lets the user select from a range of values by moving a Thumb control along a track.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="223"/>
+        <location filename="../assets/ItemData.qml" line="262"/>
         <source>SpinBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="225"/>
+        <location filename="../assets/ItemData.qml" line="264"/>
         <source>A text control used for numeric input and evaluation of algebraic equations.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="231"/>
+        <location filename="../assets/ItemData.qml" line="269"/>
         <source>PillButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="233"/>
+        <location filename="../assets/ItemData.qml" line="271"/>
         <source>A button that can toggled between 2 states like a ToggleButton.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="239"/>
+        <location filename="../assets/ItemData.qml" line="276"/>
         <source>Segmented</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="241"/>
+        <location filename="../assets/ItemData.qml" line="278"/>
         <source>A common UI control to configure a view or setting.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="247"/>
+        <location filename="../assets/ItemData.qml" line="283"/>
         <source>ToggleButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="249"/>
+        <location filename="../assets/ItemData.qml" line="285"/>
         <source>A button that can toggled between 2 states like a CheckBox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="254"/>
+        <location filename="../assets/ItemData.qml" line="290"/>
         <source>Switch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="256"/>
+        <location filename="../assets/ItemData.qml" line="292"/>
         <source>A switch that can toggled between 2 states.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="272"/>
+        <location filename="../assets/ItemData.qml" line="308"/>
         <source>TextArea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="274"/>
+        <location filename="../assets/ItemData.qml" line="310"/>
         <source>A multi-line plain text field.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="280"/>
+        <location filename="../assets/ItemData.qml" line="315"/>
         <source>TextField</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="282"/>
+        <location filename="../assets/ItemData.qml" line="317"/>
         <source>A single-lineplain text field.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="288"/>
+        <location filename="../assets/ItemData.qml" line="323"/>
         <source>TimePicker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="295"/>
+        <location filename="../assets/ItemData.qml" line="330"/>
         <source>TitleBar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="297"/>
+        <location filename="../assets/ItemData.qml" line="332"/>
         <source>An example showing a custom UIElement used as the titlebar for the app&apos;s window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="302"/>
+        <location filename="../assets/ItemData.qml" line="337"/>
         <source>ToolTip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/ItemData.qml" line="304"/>
+        <location filename="../assets/ItemData.qml" line="339"/>
         <source>Display information for an element in a pop-up window.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1864,48 +2138,138 @@ Meow</source>
     </message>
     <message>
         <location filename="../pages/controls/NavigationView.qml" line="16"/>
-        <source>The navigation view control provides a common vertical layout for top-level areas of your app via a collapsible navigation menu.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../pages/controls/NavigationView.qml" line="27"/>
         <source>Sample Page 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/controls/NavigationView.qml" line="35"/>
+        <location filename="../pages/controls/NavigationView.qml" line="22"/>
         <source>Sample Page 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/controls/NavigationView.qml" line="69"/>
+        <location filename="../pages/controls/NavigationView.qml" line="55"/>
         <source>Sample Page 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/controls/NavigationView.qml" line="80"/>
-        <location filename="../pages/controls/NavigationView.qml" line="120"/>
+        <location filename="../pages/controls/NavigationView.qml" line="65"/>
+        <location filename="../pages/controls/NavigationView.qml" line="187"/>
         <source>Settings</source>
         <translation type="unfinished">设置</translation>
     </message>
     <message>
-        <location filename="../pages/controls/NavigationView.qml" line="90"/>
-        <source>NavigationView with default PaneDisplayMode</source>
+        <location filename="../pages/controls/NavigationView.qml" line="69"/>
+        <source>Settings page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/controls/NavigationView.qml" line="105"/>
+        <location filename="../pages/controls/NavigationView.qml" line="77"/>
+        <source>Pinned Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="81"/>
+        <source>This page is pinned to the top of the navigation bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="89"/>
+        <source>Pinned Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="93"/>
+        <source>This page is pinned to the bottom of the navigation bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="101"/>
+        <source>The NavigationView control provides a collapsible navigation menu for top-level navigation. It implements the navigation pane pattern and automatically adapts to different window sizes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="114"/>
+        <source>NavigationView with configurable width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="121"/>
+        <source>Configure navigation bar width using expandWidth (0 = dynamic, &gt;0 = fixed). Enable drag resize to manually adjust width by dragging the right edge.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="169"/>
+        <source>Long Title for Testing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="173"/>
+        <source>Click to expand and see this extra long text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="181"/>
+        <source>Star Item</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="239"/>
+        <source>Pin to Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="246"/>
+        <source>Pin to Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="253"/>
+        <source>Enable Drag Resize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="273"/>
+        <source>Width (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="302"/>
+        <source>Dynamic width mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="304"/>
+        <source>Fixed: %1px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="311"/>
+        <source>Dynamic Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="311"/>
+        <source>Fixed Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="333"/>
+        <source>Min Width (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="353"/>
+        <source>Max Width (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/NavigationView.qml" line="159"/>
         <source>Menu Item 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/controls/NavigationView.qml" line="110"/>
+        <location filename="../pages/controls/NavigationView.qml" line="164"/>
         <source>Menu Item 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../pages/controls/NavigationView.qml" line="115"/>
-        <source>Menu Item 3</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2139,6 +2503,14 @@ Determinate - shows how much progress has been made on a known amount of work.</
     <message>
         <location filename="../pages/controls/RoundButton.qml" line="37"/>
         <source>Disable Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Search</name>
+    <message>
+        <location filename="../pages/Search.qml" line="28"/>
+        <source>All</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2421,92 +2793,106 @@ Determinate - shows how much progress has been made on a known amount of work.</
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="64"/>
+        <location filename="../pages/Settings.qml" line="60"/>
+        <source>Accent Color</source>
+        <translation>主题色</translation>
+    </message>
+    <message>
+        <location filename="../pages/Settings.qml" line="61"/>
+        <source>Pick the color which app highlighted color</source>
+        <translation>选择用于应用高亮显示的颜色</translation>
+    </message>
+    <message>
+        <location filename="../pages/Settings.qml" line="80"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="69"/>
+        <location filename="../pages/Settings.qml" line="85"/>
         <source>Display Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="70"/>
+        <location filename="../pages/Settings.qml" line="86"/>
         <source>Set your preferred language for the gallery</source>
         <translation>为组件库选择你的偏好语言</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="77"/>
+        <location filename="../pages/Settings.qml" line="93"/>
         <source>Use System Language</source>
         <translation>跟随系统语言</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="101"/>
+        <location filename="../pages/Settings.qml" line="117"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="106"/>
+        <location filename="../pages/Settings.qml" line="122"/>
         <source>RinUI Gallery</source>
         <translation>RinUI 组件库</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="107"/>
-        <source>© 2025 RinLit. All rights reserved.</source>
-        <translation>© 2025 RinLit. 保留所有权利.</translation>
+        <location filename="../pages/Settings.qml" line="123"/>
+        <source>© 2026 RinLit. All rights reserved.</source>
+        <translation type="unfinished">© 2026 RinLit. 保留所有权利.</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="118"/>
+        <source>© 2025 RinLit. All rights reserved.</source>
+        <translation type="vanished">© 2025 RinLit. 保留所有权利.</translation>
+    </message>
+    <message>
+        <location filename="../pages/Settings.qml" line="134"/>
         <source>To clone this repository</source>
         <translation>克隆这个存储库</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="135"/>
+        <location filename="../pages/Settings.qml" line="151"/>
         <source>File a bug or request new sample</source>
         <translation>提出 Bug 或请求新示例</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="138"/>
+        <location filename="../pages/Settings.qml" line="154"/>
         <source>Create an issue on GitHub</source>
         <translation>在 GitHub 发起议题</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="146"/>
+        <location filename="../pages/Settings.qml" line="162"/>
         <source>Dependencies &amp; references</source>
         <translation>依赖与引用</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="149"/>
+        <location filename="../pages/Settings.qml" line="165"/>
         <source>Qt &amp; Qt Quick</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="153"/>
+        <location filename="../pages/Settings.qml" line="169"/>
         <source>Fluent Design System</source>
         <translation>Fluent 设计系统</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="157"/>
+        <location filename="../pages/Settings.qml" line="173"/>
         <source>Fluent UI System Icons</source>
         <translation>Fluent UI 系统图标</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="161"/>
+        <location filename="../pages/Settings.qml" line="177"/>
         <source>WinUI 3 Gallery</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="167"/>
+        <location filename="../pages/Settings.qml" line="183"/>
         <source>License</source>
         <translation>开源许可协议</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="168"/>
+        <location filename="../pages/Settings.qml" line="184"/>
         <source>This project is licensed under the MIT license</source>
         <translation>本项目采用 MIT 开源许可协议</translation>
     </message>
     <message>
-        <location filename="../pages/Settings.qml" line="171"/>
+        <location filename="../pages/Settings.qml" line="187"/>
         <source>MIT License</source>
         <translation>MIT 许可</translation>
     </message>
@@ -2688,6 +3074,16 @@ Determinate - shows how much progress has been made on a known amount of work.</
         <source>Enter your profile...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../pages/controls/TextArea.qml" line="57"/>
+        <source>ScrollableTextArea rich text demo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/controls/TextArea.qml" line="69"/>
+        <source>Paste rich text (HTML) here...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TextField</name>
@@ -2842,91 +3238,96 @@ Determinate - shows how much progress has been made on a known amount of work.</
     <name>gallery</name>
     <message>
         <location filename="../gallery.qml" line="32"/>
+        <source>Search controls and samples...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../gallery.qml" line="58"/>
         <source>Tips</source>
         <translation>提示</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="33"/>
+        <location filename="../gallery.qml" line="59"/>
         <source>This page is &lt;b&gt;not a bug&lt;/b&gt;, but a demo of an error in the RinUI loading interface.</source>
         <translation>这个页面不是 &lt;b&gt;Bug&lt;/b&gt; ，而是 RinUI 在加载页面出错时的演示界面。</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="51"/>
+        <location filename="../gallery.qml" line="77"/>
         <source>Home</source>
         <translation>主页</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="56"/>
+        <location filename="../gallery.qml" line="83"/>
         <source>Design guidance</source>
         <translation>设计指南</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="60"/>
+        <location filename="../gallery.qml" line="87"/>
         <source>Iconography</source>
         <translation>图标</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="69"/>
+        <location filename="../gallery.qml" line="96"/>
         <source>All Samples</source>
         <translation>所有示例</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="75"/>
+        <location filename="../gallery.qml" line="102"/>
         <source>Basic Input</source>
         <translation>基本输入</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="81"/>
+        <location filename="../gallery.qml" line="108"/>
         <source>Collections</source>
         <translation>集合</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="87"/>
+        <location filename="../gallery.qml" line="114"/>
         <source>Date &amp; Time</source>
         <translation>日期与时间</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="93"/>
+        <location filename="../gallery.qml" line="120"/>
         <source>Dialogs &amp; Flyouts</source>
         <translation>弹窗和浮窗</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="99"/>
+        <location filename="../gallery.qml" line="126"/>
         <source>Layout</source>
         <translation>布局</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="105"/>
+        <location filename="../gallery.qml" line="132"/>
         <source>Media</source>
         <translation>媒体</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="111"/>
+        <location filename="../gallery.qml" line="138"/>
         <source>Menus &amp; Toolbars</source>
         <translation>菜单与工具栏</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="117"/>
+        <location filename="../gallery.qml" line="144"/>
         <source>Navigation</source>
         <translation>导航</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="123"/>
+        <location filename="../gallery.qml" line="150"/>
         <source>Status &amp; Info</source>
         <translation>状态与信息</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="129"/>
+        <location filename="../gallery.qml" line="156"/>
         <source>Text &amp; Typography</source>
         <translation>文字与排版</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="135"/>
+        <location filename="../gallery.qml" line="162"/>
         <source>Error Interface Test</source>
         <translation>错误页面测试</translation>
     </message>
     <message>
-        <location filename="../gallery.qml" line="140"/>
+        <location filename="../gallery.qml" line="167"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
