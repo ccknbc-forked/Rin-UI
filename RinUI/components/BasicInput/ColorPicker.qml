@@ -340,7 +340,12 @@ ColumnLayout {
         // 上方：ComboBox + HEX
         RowLayout {
             visible: !isMoreVisible || !collapsed; Layout.fillWidth: true; spacing: 16
-            ComboBox { id: channelMode; model: ["RGB", "HSV"]; Layout.preferredWidth: channelFieldWidth }
+            ComboBox {
+                id: channelMode
+                visible: isColorChannelInputVisible
+                model: ["RGB", "HSV"]
+                Layout.preferredWidth: channelFieldWidth
+            }
             Item { Layout.fillWidth: true }
             TextField {
                 id: hexInput; visible: root.isHexInputVisible; Layout.preferredWidth: 132; leftPadding: 22
