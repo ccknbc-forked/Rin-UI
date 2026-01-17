@@ -45,6 +45,8 @@ Item {
     property string viewMode: "day"
     property int yearRangeStart: Math.floor(displayYear / 16) * 16
     property bool suppressCellBehavior: false
+    property bool _suppressingViewTransition: false
+    property string _pendingViewMode: ""
     property var firstCellDate: new Date()
     property int gridDaysCount: 42
 
@@ -166,16 +168,39 @@ Item {
         displayMonth = ym % 12 + 1;
     }
 
+    function _switchViewMode(newMode) {
+        if (newMode === viewMode) return
+        
+        _suppressingViewTransition = true
+        _pendingViewMode = newMode
+        
+        // 使用Timer来延迟视图切换，避免动画冲突
+        viewSwitchTimer.start()
+    }
+    
+    Timer {
+        id: viewSwitchTimer
+        interval: 16 // 约60fps
+        onTriggered: {
+            viewMode = _pendingViewMode
+            _pendingViewMode = ""
+            _suppressingViewTransition = false
+        }
+    }
+
     function navigateMonth(delta) {
         if (animateTransitions) {
             pendingDelta = delta
             suppressCellBehavior = true
+            _suppressingViewTransition = true
             runMonthAnimation(delta)
         } else {
             suppressCellBehavior = true
+            _suppressingViewTransition = true
             updateMonth(delta)
             firstCellDate = computeFirstCellDate()
             suppressCellBehavior = false
+            _suppressingViewTransition = false
         }
     }
     function resetToToday() {
@@ -212,6 +237,7 @@ Item {
             firstCellDate = computeFirstCellDate()
             gridContent.x = 0
             suppressCellBehavior = false
+            _suppressingViewTransition = false
         }
     }
 
@@ -287,9 +313,9 @@ Item {
                 cursorShape: enabled ? Qt.PointingHandCursor : Qt.ArrowCursor
                 onClicked: {
                     if (calendar.viewMode === "day") {
-                        calendar.viewMode = "months"
+                        calendar._switchViewMode("months")
                     } else if (calendar.viewMode === "months") {
-                        calendar.viewMode = "years"
+                        calendar._switchViewMode("years")
                     }
                 }
             }
@@ -441,7 +467,12 @@ Item {
                 columnSpacing: gridArea.spacing
                 opacity: calendar.viewMode === "day" ? 1 : 0
                 visible: opacity > 0
-                Behavior on opacity { NumberAnimation { duration: (calendar.suppressCellBehavior || calendar.fastMode) ? 0 : 300; easing.type: Easing.OutCubic } }
+                Behavior on opacity { 
+                    NumberAnimation { 
+                        duration: (calendar.suppressCellBehavior || calendar.fastMode || calendar._suppressingViewTransition) ? 0 : 300; 
+                        easing.type: Easing.OutCubic 
+                    } 
+                }
                 Repeater {
                     id: dayRepeater
                     model: calendar.gridDaysCount
@@ -454,7 +485,12 @@ Item {
                 anchors.fill: parent
                 opacity: calendar.viewMode === "months" ? 1 : 0
                 visible: opacity > 0
-                Behavior on opacity { NumberAnimation { duration: 300; easing.type: Easing.OutCubic } }
+                Behavior on opacity { 
+                    NumberAnimation { 
+                        duration: calendar._suppressingViewTransition ? 0 : 300; 
+                        easing.type: Easing.OutCubic 
+                    } 
+                }
                 property int cols: 4
                 property int spacing: gridArea.spacing
                 property real cellSize: Math.floor((width - spacing*(cols-1)) / cols)
@@ -499,9 +535,7 @@ Item {
                                 onClicked: {
                                     calendar.displayYear = tileYear
                                     calendar.displayMonth = monthNumber
-                                    calendar.selectedDate = new Date(tileYear, monthNumber - 1, 1)
-                                    calendar.viewMode = "day"
-                                    calendar.clicked(calendar.selectedDate)
+                                    calendar._switchViewMode("day")
                                 }
                             }
                         }
@@ -514,7 +548,12 @@ Item {
                 anchors.fill: parent
                 opacity: calendar.viewMode === "years" ? 1 : 0
                 visible: opacity > 0
-                Behavior on opacity { NumberAnimation { duration: 300; easing.type: Easing.OutCubic } }
+                Behavior on opacity { 
+                    NumberAnimation { 
+                        duration: calendar._suppressingViewTransition ? 0 : 300; 
+                        easing.type: Easing.OutCubic 
+                    } 
+                }
                 property int cols: 4
                 property int spacing: gridArea.spacing
                 property real cellSize: Math.floor((width - spacing*(cols-1)) / cols)
@@ -555,8 +594,7 @@ Item {
                                 hoverEnabled: true
                                 onClicked: {
                                     calendar.displayYear = year
-                                    calendar.viewMode = "months"
-                                    calendar.clicked(new Date(year, calendar.displayMonth - 1, 1))
+                                    calendar._switchViewMode("months")
                                 }
                             }
                         }

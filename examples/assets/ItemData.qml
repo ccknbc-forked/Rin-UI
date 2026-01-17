@@ -36,7 +36,7 @@ QtObject {
 
     // data / 控件数据 //
 
-    // ps: sort by name
+    // ps: sort by alphabet, 请严格按照字母表顺序添加！！！！！！！！！！！！！ 别乱动
     property var allControls: [
         {
             icon: Qt.resolvedUrl("controls/AutoSuggestBox.png"),
@@ -64,11 +64,35 @@ QtObject {
             page: Qt.resolvedUrl("../pages/controls/Button.qml"),
         },
         {
+            icon: Qt.resolvedUrl("controls/CalendarDatePicker.png"),
+            title: qsTr("CalendarDatePicker"),
+            type: "date&time",
+            desc: qsTr("A control that let user pick a date value using a calendar."),
+            page: Qt.resolvedUrl("../pages/controls/CalendarDatePicker.qml"),
+            added: true,
+        },
+        {
+            icon: Qt.resolvedUrl("controls/CalendarView.png"),
+            title: qsTr("Calendar"),
+            type: "date&time",
+            desc: qsTr("A control that presents a calendar for a user to set choose a date form."),
+            page: Qt.resolvedUrl("../pages/controls/CalendarView.qml"),
+            added: true,
+        },
+        {
             icon: Qt.resolvedUrl("controls/CheckBox.png"),
             title: qsTr("CheckBox"),
             type: "basicInput",
             desc: qsTr("A Control that user can be select or clear."),
             page: Qt.resolvedUrl("../pages/controls/CheckBox.qml"),
+        },
+        {
+            icon: Qt.resolvedUrl("controls/ColorPicker.png"),
+            title: qsTr("ColorPicker"),
+            type: "basicInput",
+            desc: qsTr("A control that displays a selectable color spectrum."),
+            page: Qt.resolvedUrl("../pages/controls/ColorPicker.qml"),
+            added: true,
         },
         {
             icon: Qt.resolvedUrl("controls/ComboBox.png"),
@@ -90,22 +114,6 @@ QtObject {
             type: "date&time",
             desc: qsTr("A configurable control that lets a user pick a time value."),
             page: Qt.resolvedUrl("../pages/controls/DatePicker.qml"),
-            added: true,
-        },
-        {
-            icon: Qt.resolvedUrl("controls/CalendarView.png"),
-            title: qsTr("Calendar"),
-            type: "date&time",
-            desc: qsTr("A control that presents a calendar for a user to set choose a date form."),
-            page: Qt.resolvedUrl("../pages/controls/CalendarView.qml"),
-            added: true,
-        },
-        {
-            icon: Qt.resolvedUrl("controls/CalendarDatePicker.png"),
-            title: qsTr("CalendarDatePicker"),
-            type: "date&time",
-            desc: qsTr("A control that let user pick a date value using a calendar."),
-            page: Qt.resolvedUrl("../pages/controls/CalendarDatePicker.qml"),
             added: true,
         },
         {
@@ -210,8 +218,7 @@ QtObject {
             title: qsTr("ProgressRing"),
             type: "status&info",
             desc: qsTr("Shows the apps progress on a task, or that the app is performing ongoing work that doesn't block user interaction."),
-            page: Qt.resolvedUrl("../pages/controls/ProgressRing.qml"),
-            added: true,
+            page: Qt.resolvedUrl("../pages/controls/ProgressRing.qml")
         },
         {
             icon: Qt.resolvedUrl("controls/RadioButton.png"),
@@ -234,8 +241,7 @@ QtObject {
             desc: qsTr(
                 "Presents information from a small set of  different sources. The user can pick one of them."
             ),
-            page: Qt.resolvedUrl("../pages/controls/SelectorBar.qml"),
-            added: true,
+            page: Qt.resolvedUrl("../pages/controls/SelectorBar.qml")
         },
         {
             icon: Qt.resolvedUrl("controls/Expander.png"),

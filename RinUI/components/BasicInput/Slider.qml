@@ -1,9 +1,9 @@
 import QtQuick 2.15
-import QtQuick.Controls.Basic 2.15
+import QtQuick.Controls.Basic
 import "../../themes"
 import "../../components"
 
-// thanks JerryQAQ
+// thanks @JerryQAQ
 
 Slider {
     id: root
@@ -107,10 +107,10 @@ Slider {
 
         // 动态调整手柄位置：根据 orientation 切换 x/y 轴逻辑
         x: root.orientation === Qt.Horizontal
-           ? root.visualPosition * (parent.width - width)  // 横向：x 受 visualPosition 控制
+           ? root.visualPosition * (root.width - width)  // 横向：x 受 visualPosition 控制
            : (parent.width - width) / 2  // 竖向
         y: root.orientation === Qt.Vertical
-           ? (root.visualPosition) * (parent.height - height)  // 竖向：y 受 visualPosition 控制
+           ? (root.visualPosition) * (root.height - height)  // 竖向：y 受 visualPosition 控制
            : (parent.height - height) / 2  // 横向
 
 

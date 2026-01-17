@@ -9,6 +9,7 @@ Frame {
     id: frame
     default property alias content: controlContainer.data
     property alias showcase: showcaseContainer.data
+    property alias showcaseWidth: right.width
 
     leftPadding: 0
     rightPadding: 0

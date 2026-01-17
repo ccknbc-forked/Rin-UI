@@ -21,6 +21,7 @@ Hyperlink 1.0 components/BasicInput/Hyperlink.qml
 RadioButton 1.0 components/BasicInput/RadioButton.qml
 CheckBox 1.0 components/BasicInput/CheckBox.qml
 Slider 1.0 components/BasicInput/Slider.qml
+ColorPicker 1.0 components/BasicInput/ColorPicker.qml
 
 # Date & Time
 TimePicker 1.0 components/DateAndTime/TimePicker.qml
