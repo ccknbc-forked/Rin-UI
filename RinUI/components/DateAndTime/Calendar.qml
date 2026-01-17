@@ -333,8 +333,8 @@ Item {
             enabled: false
             width: 0; height: 0
             Layout.alignment: Qt.AlignVCenter
-            checkedText: qsTr("多选")
-            uncheckedText: qsTr("单选")
+            checkedText: qsTr("Range")
+            uncheckedText: qsTr("Single")
             onToggled: {
                 calendar.selectionMode = checked ? "range" : "single"
                 if (!checked) {
