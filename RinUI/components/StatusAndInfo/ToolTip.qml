@@ -50,7 +50,7 @@ ToolTip {
     background: Rectangle {
         id: background
         width: tooltipText.width + 20
-        height: tooltipText.height + 13
+        height: tooltipText.height + 14
         anchors.horizontalCenter: parent.horizontalCenter
         y: -6
 
