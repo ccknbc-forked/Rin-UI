@@ -12,6 +12,13 @@
 >
 > Of course, you are welcome to contribute to this project.
 
+> [!NOTE]
+> ### RinUI has reached 100 ⭐!
+> This milestone came as a pleasant surprise to me. Thank you to everyone who follows, uses, and supports the project.
+> 
+> I would also like to give special thanks to all contributors.
+> Whether through code contributions, issue reports, or suggestions and discussions, your efforts have helped make RinUI better.
+
 ## 📄 Introduction
 
 RinUI is a UI library similar to Fluent Design for Qt Quick (QML), RinUI will provide high-quality components and practical functions.
