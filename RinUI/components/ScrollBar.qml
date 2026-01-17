@@ -10,16 +10,23 @@ ScrollBar {
     property int expandWidth: Theme.currentTheme.appearance.scrollBarWidth
 
     // 宽高
-    implicitWidth: horizontal ? parent.width
-        : (implicitContentWidth + leftPadding + rightPadding)
-    implicitHeight: vertical ? parent.height
-        : (implicitContentHeight + topPadding + bottomPadding)
+    // implicitWidth: horizontal ? parent.width
+    //     : (implicitContentWidth + leftPadding + rightPadding)
+    // implicitHeight: vertical ? parent.height
+    //     : (implicitContentHeight + topPadding + bottomPadding)
+    implicitWidth: horizontal
+        ? availableWidth
+        : implicitContentWidth + leftPadding + rightPadding
+
+    implicitHeight: vertical
+        ? availableHeight
+        : implicitContentHeight + topPadding + bottomPadding
 
     // 锚点 //
-    anchors.verticalCenter: vertical ? parent.verticalCenter : undefined
-    anchors.horizontalCenter: horizontal ? parent.horizontalCenter : undefined
-    anchors.right: vertical ? parent.right : undefined
-    anchors.bottom: horizontal ? parent.bottom : undefined
+    anchors.verticalCenter: vertical && parent ? parent.verticalCenter : undefined
+    anchors.horizontalCenter: horizontal && parent ? parent.horizontalCenter : undefined
+    anchors.right: vertical && parent ? parent.right : undefined
+    anchors.bottom: horizontal && parent ? parent.bottom : undefined
 
     verticalPadding : vertical ? 15 : 3
     horizontalPadding : horizontal ? 15 : 3
