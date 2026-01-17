@@ -12,6 +12,8 @@ ColumnLayout {
     /* ================= 基础状态 ================= */
 
     property color color: Qt.rgba(1, 0, 0, 1)
+    property string colorName: getColorName(hue, saturation,
+        value)
 
     property real hue: 0
     property real saturation: 1
@@ -21,12 +23,12 @@ ColumnLayout {
     property bool ringMode: false
     property bool collapsed: true
 
-    property bool isMoreVisible: false
-    property bool isColorSliderVisible: true
-    property bool isColorChannelInputVisible: true
-    property bool isHexInputVisible: true
-    property bool isAlphaSliderVisible: true
-    property bool isAlphaInputVisible: true
+    property bool moreVisible: false
+    property bool colorSliderVisible: true
+    property bool colorChannelInputVisible: true
+    property bool hexInputVisible: true
+    property bool alphaSliderVisible: true
+    property bool alphaInputVisible: true
     property bool alphaEnabled: false
 
     readonly property int sliderHeight: 12
@@ -157,16 +159,29 @@ ColumnLayout {
                 id: pickerIndicator
                 width: 14; height: 14; radius: 7; border.width: 2
                 border.color: {
-                    var c = root.color; var L = 0.2126*c.r + 0.7152*c.g + 0.0722*c.b
+                    var c = Qt.hsva(root.hue/360, root.saturation, 1, 1)
+                    var L = 0.2126*c.r + 0.7152*c.g + 0.0722*c.b
                     return (L < 0.75) ? "white" : "black"
                 }
                 color: "transparent"
                 x: root.ringMode ? colorField.width/2 + root.saturation * Math.min(colorField.width,colorField.height)/2 * Math.cos(root.hue*Math.PI/180) - 7 : (root.hue/360) * colorField.width - 7
                 y: root.ringMode ? colorField.height/2 + root.saturation * Math.min(colorField.width,colorField.height)/2 * Math.sin(root.hue*Math.PI/180) - 7 : (1 - root.saturation) * colorField.height - 7
+
+                ToolTip {
+                    text: root.colorName
+                    timeout: -1
+                    y: -22 - parent.height
+                    closePolicy: Popup.NoAutoClose
+                    visible: root.activeFocus
+                }
             }
 
             MouseArea {
-                anchors.fill: parent; preventStealing: true
+                id: pickerArea
+                anchors.fill: parent
+                preventStealing: true
+                hoverEnabled: true
+
                 onPressed: {
                     root.forceActiveFocus()  // 抢走聚焦
                     updateFromMouse(mouseX, mouseY)
@@ -226,7 +241,7 @@ ColumnLayout {
         Layout.fillWidth: true; spacing: 22
 
         Slider {
-            id: valueSlider; visible: root.isColorSliderVisible
+            id: valueSlider; visible: root.colorSliderVisible
             Layout.fillWidth: true
             from: 0
             to: 1
@@ -250,7 +265,7 @@ ColumnLayout {
         }
 
         Slider {
-            id: alphaSlider; visible: root.alphaEnabled && root.isAlphaInputVisible
+            id: alphaSlider; visible: root.alphaEnabled && root.alphaSliderVisible
             Layout.fillWidth: true
             from: 0
             to: 1
@@ -321,7 +336,7 @@ ColumnLayout {
 
 
         RowLayout {
-            visible: isMoreVisible
+            visible: moreVisible
             Item {
                 Layout.fillWidth: true
             }
@@ -339,16 +354,16 @@ ColumnLayout {
 
         // 上方：ComboBox + HEX
         RowLayout {
-            visible: !isMoreVisible || !collapsed; Layout.fillWidth: true; spacing: 16
+            visible: !moreVisible || !collapsed; Layout.fillWidth: true; spacing: 16
             ComboBox {
                 id: channelMode
-                visible: isColorChannelInputVisible
+                visible: colorChannelInputVisible
                 model: ["RGB", "HSV"]
                 Layout.preferredWidth: channelFieldWidth
             }
             Item { Layout.fillWidth: true }
             TextField {
-                id: hexInput; visible: root.isHexInputVisible; Layout.preferredWidth: 132; leftPadding: 22
+                id: hexInput; visible: root.hexInputVisible; Layout.preferredWidth: 132; leftPadding: 22
                 // 仅在失去焦点时强制同步，输入时允许实时响应 onTextEdited
                 text: activeFocus ? text : (function(){
                     var r = Math.round(root.color.r * 255).toString(16).padStart(2, '0')
@@ -363,7 +378,6 @@ ColumnLayout {
                         var tempColor = Qt.color("#" + text)
                         if (tempColor.toString() !== "#000000" || text.startsWith("000000")) {
                             root.color = tempColor
-
                         }
                     }
                 }
@@ -372,7 +386,7 @@ ColumnLayout {
         }
 
         ColumnLayout {
-            visible: root.isColorChannelInputVisible && (!isMoreVisible || !collapsed); Layout.fillWidth: true; spacing: 12
+            visible: root.colorChannelInputVisible && (!moreVisible || !collapsed); Layout.fillWidth: true; spacing: 12
             Repeater {
                 model: channelMode.currentText === "RGB"
                    ? [{ label: qsTr("Red"), m: "r" }, { label: qsTr("Green"), m: "g" }, { label: qsTr("Blue"), m: "b" }]
@@ -409,10 +423,11 @@ ColumnLayout {
             }
 
             RowLayout {
-                visible: root.alphaEnabled && root.isAlphaInputVisible
+                visible: root.alphaEnabled && root.alphaInputVisible
                 spacing: 8
                 TextField {
                     id: alphaInput; Layout.preferredWidth: channelFieldWidth
+                    rightPadding: 28 + 22
                     text: activeFocus ? text : Math.round(root.alpha * 100).toString()
                     onTextEdited: {
                         var val = parseFloat(text)
@@ -421,9 +436,46 @@ ColumnLayout {
                             root.updateColor()
                         }
                     }
+
+                    Text { text: "%"; anchors.right: parent.right; anchors.rightMargin: 8; anchors.verticalCenter: parent.verticalCenter }
                 }
                 Text { text: qsTr("Opacity"); Layout.fillWidth: true; verticalAlignment: Text.AlignVCenter }
             }
         }
+    }
+
+    /* ================= 颜色名字 ================= */
+    function getColorName(h, s, v) {
+        if (v < 0.1)
+            return "Black"
+
+        if (s < 0.08)
+            return v > 0.9 ? "White" : "Gray"
+
+        if (v > 0.8 && s < 0.45) {
+            if (h < 35) return "Light orange"
+            if (h < 65) return "Light yellow"
+            if (h < 140) return "Light green"
+            if (h < 205) return "Light turquoise"
+            if (h < 230) return "Sky blue"
+            if (h < 255) return "Light blue"
+        }
+
+        if (s < 0.45) {
+            if (h >= 255 && h < 290) return "Lavender"
+            if (h >= 290 && h < 345) return "Rose"
+        }
+
+        if (h < 15 || h >= 345) return "Red"
+        if (h < 35) return "Orange"
+        if (h < 50) return "Gold"
+        if (h < 70) return "Lime"
+        if (h < 140) return "Green"
+        if (h < 165) return "Teal"
+        if (h < 185) return "Aqua"
+        if (h < 205) return "Turquoise"
+        if (h < 255) return "Blue"
+        if (h < 290) return "Purple"
+        return "Pink"
     }
 }
