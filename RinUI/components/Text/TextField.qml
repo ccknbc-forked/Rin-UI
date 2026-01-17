@@ -83,17 +83,18 @@ TextField {
 
     leftPadding: 12
     rightPadding: (clearEnabled && clearBtn.visible ? 28 : 12)
-    topPadding: 5
+    topPadding: 4
     bottomPadding: 7
 
     // 清空按钮
     Button {
         id: clearBtn
         anchors.right: parent.right
-        anchors.rightMargin: 6
+        anchors.margins: 4
+        anchors.rightMargin: root.rightPadding - width + 2
         anchors.verticalCenter: parent.verticalCenter
-        implicitWidth: 24
-        implicitHeight: 24
+        implicitWidth: 26
+        implicitHeight: 22
         focusPolicy: Qt.NoFocus
         flat: true
         highlighted: true
@@ -102,8 +103,9 @@ TextField {
         contentItem: Icon {
             name: "ic_fluent_dismiss_20_regular"
             size: 14
-            color: Theme.currentTheme.colors.textSecondaryColor
+            color: Theme.currentTheme.colors.textTertialyColor
         }
+        radius: Theme.currentTheme.appearance.smallRadius
     }
 
     // 状态变化
